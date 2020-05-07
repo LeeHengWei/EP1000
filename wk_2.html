@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function startTime() {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('txt').innerHTML =
+                h + ":" + m + ":" + s;
+            var t = setTimeout(startTime, 500);
+        }
+        function checkTime(i) {
+            if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
+            return i;
+        }
+    </script>
+</head>
+<body onload="startTime()">
+
+    <style>
+        table {
+            margin-left: auto;
+            margin-right: auto;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .table:hover {
+            opacity: 0.8;
+        }
+
+        td, th {
+            border: 1px solid #a9a9a9;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+            padding: 8px;
+        }
+
+        *
+        tr:nth-child(odd) {
+            background-color: #FAFAD2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        body {
+            font-family: arial, sans-serif;
+            background-image: url('https://www.ceeri.res.in/wp-content/uploads/2018/03/Flexible-Electronics-Background.png');
+            background-attachment: fixed;
+        }
+
+        .table {
+            transition: 0.3s;
+            border: 1px solid black;
+            margin: auto;
+        }
+
+        h1 {
+            text-shadow: 1px 1px 2px black, 0 0 25px yellow, 0 0 5px grey;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+        }
+
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: 1px solid black;
+            outline: none;
+            background-color: #DDDDDD;
+            color: #FAFAD2;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+        }
+
+            #myBtn:hover {
+                background-color: darkgray;
+            }
+
+            ul
+            {
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+              width: 25%;
+              background-color: #f1f1f1;
+              position: fixed;
+              height: 100%;
+              overflow: auto;
+            }
+
+            div li
+            {
+              style=font-size:130%;
+              margin-left:10%;
+              margin-right:10%;
+              padding:10px
+
+            }
+
+            li a
+            {
+              display: block;
+              color: #000;
+              padding: 8px 16px;
+              text-decoration: none;
+             }
+
+             li a.active
+             {
+               background-color: #4CAF50;
+               color: white;
+             }
+
+             li a:hover:not(.active)
+             {
+               background-color: #555;
+               color: white;
+             }
+
+    </style>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><b>^</b></button>
+    </script>
+    <script>
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+    <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="wk_1.html">Project Management and Lab Safety</a></li>
+    <li><a href="wk_2.html">HTML editor</a></li>
+    <li><a href="wk_3.html">Version Control</a></li>
+  </ul>
+
+  <marquee style="background-color:rgba(255, 99, 71, 0.5); margin-bottom: 40px; white-space:nowrap;">
+      <h3 style="text-align:center;font-size=20;color:#FAFAD2; ">HTML Editor <span style="padding-left:20%">Current Time: <span id="txt"></span></span></h3>
+  </marquee>
+
+<div style="margin-left:25%;padding:1px 16px;height:1000px;">
+    <div style="background-color: rgba(100, 100, 100, 0.8);width:90%;margin: auto;padding:10px;border-radius: 8px; border:1px solid #FAFAD2;">
+        <br>
+        <h1 style="text-align:center;font-size=150%;color:#FAFAD2;">WEEK 2</h1>
+        <h1 style="text-align:center;font-size=200%;color:#FAFAD2;">HTML EDITOR</h1>
+        <br>
+
+        <h1 style="text-align:center;font-size=400%;color:#FAFAD2;background-color:rgba(255, 99, 71, 0.5);">Intro to HTML</h1>
+        <div  style="background-color: #FAFAD2;">
+          <li> Describes the sturcture of a Web page </li>
+          <li> Tells the browser how to display the content</li>
+          <li> Label pieces of content such as "heading", "paragraph", "table", and so on</li>
+          <p style="text-decoration: underline;text-align:center;font-size=90%;padding-bottom:10px"><b>In order make available infomation on www, you need the following </b></p>
+          <li>A web Server or Service (example: github.com)</li>
+          <li>A web page written in HTML (example: index.html OR mypage.html)</li>
+          <li>A web browser at the client (example: Google)</li>
+
+          <p style="text-decoration: underline;text-align:center;font-size=90%;padding-bottom:10px"><b>Example of HTML tags use </b></p>
+            <ol>
+              <li>"!DOCTYPE html" declaration defines this document to be HTML5</li>
+              <li>"html" element is the root element of an HTML page </li>
+              <li>'h' element defines a large heading</li>
+              <li>'p' element defines a paragraph</li>
+              <li>HTML tags normally come in<b> pairs</b> like '' and ''/p'(at ending, FORWARD slash inserted before tag name)</li>
+              <li>'a' tag defines HTML link,'href' is used for link's destination</li>
+              <li>'img' element defines a picture, along with'height/width=??'</li>
+            </ol>
+
+            <p style="text-decoration: underline;text-align:center;font-size=90%;padding-bottom:10px"><b>Example</b>(I have chosen to use Atom)</p>
+
+            <img src="Example.jpg" style="width:800px;height:300px;img-align:center;margin:auto;">
+            <img src="example_webpage.jpg" style="width:800px;height:300px;img-align:center;padding-bottom:50px">
+
+        </div>
+
+          <h1 style="text-align:center;font-size=400%;color:#FAFAD2;background-color:rgba(255, 99, 71, 0.5);"><b>Suggestion to improve HTML skills</b></h1>
+
+          <div class="table">
+              <table>
+                  <tr>
+                    <th colspan="2" style="text-align:center;">Youtube Video: Jake Wright</th>
+                  </tr>
+                  <tr>
+                      <td rowspan="3" style="text-align:center;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQMAAADCCAMAAAB6zFdcAAAAflBMVEX/////AAD/+fn/ra3/kZH/3Nz/7Oz/sbH/nJz/p6f/1NT/EBD/zMz/vr7/4eH/3d3/xMT/pKT/lZX/8fH/cnL/0ND/jIz/trb/eHj/ISH/QkL/WFj/h4f/amr/fHz/R0f/ZGT/Kyv/OTn/UlL/MjL/RET/Xl7/goL/VFT/e3vLg+1WAAADB0lEQVR4nO3ca1ObUBSFYS4JEAKEgDEaL9Haavv//2CNU6fVOuPeJxz3bH2fzzrjWhLOjZAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgq8jGolvVTd+32zLPF+t1VQ3D7NEwVNV6kefltu37pp6vijGz/mMnVNTtenZ2v79dpmrnu4uTy6psOusQR+gfvumDv2l5lbu8MPKJ8j+7dtdCtpu4gkeNdSidYvoGHpXWsVSiVODrSriP1EHq556wiVVBemYdTewuWgduLoQxXgVpbh1OqI3YwY11OKHLiB2k1uGE9jE7KKzTycSswMkUIeYt0ctNsY7awaV1PJGYw4KXgWERtYOddTyRU1GW76ElWMcTOZNFKT9zBxeiKFnoXMrFiuGHOEohq+slF5Okc8W/s5H98L/mxvFEZFGeL2n1KFKbhhPSdZBk17oOestsUsoOkqRTLbJau2RimbqDJOkVp1AeNpeFS6ZXQ1wl7mBhE0tFeLTwepjPToQdrE1S6XRhHSTJXHY6WRlk0gruQLjiHD48kd48vIMkmb3/i7MPzhPiqA6S8d3bwunHxglyXAfdu+czn70DyeDg4bNwxD1RNEnwcE8MnB+IJ4sexsbADsSLBg9zpKC5smLx6GGuHLJm0mwieFgz6dfOus0kD2tnbQfaTcVPuIei3lx2sZem2VMNOGRYGccTkQ1yhw7qkMMmF3vrsgfzsmS8CWjAyRmL7KwtG4IacHLWJtgDOMLSOp5I3LP3vXU8kT5qB1fW8USEGwiBPGyhiBcMgXw8kxX32byNdTqZiI9sp+lonU5G9kBSIOtwQjEHBh/DQtyboosdlIOwhYCIdTSxeDMEH7ODJ7JlUwDrYBq3cSpw8Uzas0z/zJ2Aj+8u/DX9fXHp7/vvzVRfev/Dwxnb/7rqJuCtB2+5O/X2MXihqNt8eDi5UL8F4nz38+rXbL1tOhc7iHJPrwOZ15um7/u23ZZlflCW28NbQPpmU89XXTE6WRcBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBp/AbhqSeqCnPYIQAAAABJRU5ErkJggg==" style="width:120px;height:120px;img-align:center"></td>
+                      <td><a href="https://www.youtube.com/watch?v=bWPMSSsVdPk&feature=youtu.be">Learn HTML in 12 Minutes</a></td>
+
+                  </tr>
+                  <tr>
+                      <td><a href="https://www.youtube.com/watch?v=KJ13lX20FqU&feature=youtu.be">Learn MORE HTML in 12 Minutes</a></td>
+                  </tr>
+                  <tr>
+                      <td><a href="https://www.youtube.com/watch?v=0afZj1G0BIE&feature=youtu.be">Learn CSS in 12 Minutes</a></td>
+                  </tr>
+                  <tr>
+                    <th colspan="2" style="text-align:center;">Tutoria; & References</th>
+                  </tr>
+                  <tr>
+                      <td style="text-align:center;"><img src="data:image/png;base64,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" style="width:120px;height:120px;img-align:center"></td>
+                      <td><a href="https://www.w3schools.com/">w3schools</a> tutorial, which is easy to be use as reference</td>
+                  </tr>
+
+              </table>
+          </div>
+
+            <h1 style="text-align:center;font-size=400%;color:#FAFAD2;background-color:rgba(255, 99, 71, 0.5);">Assignment 2</h1>
+            <div class="table">
+                <table>
+                    <tr>
+                        <th>Time(approximate)</th>
+                        <th>Task</th>
+                    </tr>
+                    <tr>
+                        <td>30~45min</td>
+                        <td>Watch the videos to explore and get an idea to use HTML</td>
+                    </tr>
+                    <tr>
+                        <td>45~60min</td>
+                        <td>Try few tutorials on HTML to gain confidence in designing and develope a webpage</td>
+                    </tr>
+                    <tr>
+                        <td>60~75min</td>
+                        <td>Use text editor you have selected to create a simple web page with specifications mentioned below </td>
+                    </tr>
+
+                </table>
+            </div>
+
+            <h1 style="text-align:center;font-size=400%;color:#FAFAD2;background-color:rgba(255, 99, 71, 0.5);">Specifications</h1>
+       <div style="background-color: #FAFAD2;">
+            <p style="text-decoration: underline;text-align:center;font-size=90%;padding-top:10px"><b>Your webpage should be containing:</b> </p>
+            <li> Use heading, such as h1 or more</li>
+            <li> Use paragraph and give a brief intro about your website and what you have learnt in this module.</li>
+            <li> Use table with 2 colums:left column shows a picture of yourself and sized properly,right column describe about yourself (name, course or interest or more)
+            <li style = "padding-bottom: 50px"> Try use other tags to design a weboage(not neccesary but give a try)
+
+        </div>
+</body>
+</html>
