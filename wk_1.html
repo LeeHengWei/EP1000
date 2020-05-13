@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function startTime() {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('txt').innerHTML =
+                h + ":" + m + ":" + s;
+            var t = setTimeout(startTime, 500);
+        }
+        function checkTime(i) {
+            if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
+            return i;
+        }
+    </script>
+</head>
+<body onload="startTime()">
+
+    <style>
+        table {
+            margin-left: auto;
+            margin-right: auto;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .table:hover {
+            opacity: 0.8;
+        }
+
+        td, th {
+            border: 1px solid #a9a9a9;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+            padding: 8px;
+        }
+
+        *
+        tr:nth-child(odd) {
+            background-color: #FAFAD2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        body {
+            font-family: arial, sans-serif;
+            background-image: url('https://www.ceeri.res.in/wp-content/uploads/2018/03/Flexible-Electronics-Background.png');
+            background-attachment: fixed;
+        }
+
+        .table {
+            transition: 0.3s;
+            border: 1px solid black;
+            margin: auto;
+        }
+
+        h1 {
+            text-shadow: 1px 1px 2px black, 0 0 25px yellow, 0 0 5px grey;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+        }
+
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: 1px solid black;
+            outline: none;
+            background-color: #DDDDDD;
+            color: #FAFAD2;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+        }
+
+            #myBtn:hover {
+                background-color: darkgray;
+            }
+
+            ul
+            {
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+              width: 25%;
+              background-color:rgba(0, 0, 0,0.5);
+              position: fixed;
+              height: 100%;
+              overflow: auto;
+            }
+
+            div li
+            {
+              style=font-size:130%;
+              margin-left:10%;
+              margin-right:10%;
+              padding:10px
+
+            }
+
+            li a
+            {
+              display: block;
+              color: #42d4f5;
+              padding: 8px 16px;
+              text-decoration: none;
+             }
+
+             li a.active
+             {
+               background-color: #4CAF50;
+               color: white;
+             }
+
+             li a:hover:not(.active)
+             {
+               background-color: #555;
+               color: white;
+             }
+
+    </style>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><b>^</b></button>
+    </script>
+    <script>
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+    <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="wk_1.html">Project Management and Lab Safety</a></li>
+    <li><a href="wk_2.html">HTML editor</a></li>
+    <li><a href="wk_3.html">Version Control</a></li>
+    <li><a href="wk_4.html">Computer Aided Design and Photoshop</a></li>
+  </ul>
+
+  <marquee style="background-color:rgba(255, 99, 71, 0.5); margin-bottom: 40px; white-space:nowrap;">
+      <h3 style="text-align:center;font-size=20;color:#FAFAD2; ">SAFETY PRIORITY AND PROJECT MANAGEMENT <span style="padding-left:20%">Current Time: <span id="txt"></span></span></h3>
+  </marquee>
+
+<div style="margin-left:25%;padding:1px 16px;height:1000px;">
+    <div style="background-color: rgba(100, 100, 100, 0.8);width:90%;margin: auto;padding:10px;border-radius: 8px; border:1px solid #FAFAD2;">
+        <br>
+        <h1 style="text-align:center;font-size=150%;color:#FAFAD2;">WEEK 1</h1>
+        <h1 style="text-align:center;font-size=200%;color:#FAFAD2;">FABLAB SAFETY AND PROJECT MANAGEMENT</h1>
+        <br>
+
+        <h1 style="text-align:center;font-size=400%;color:#FAFAD2;background-color:rgba(255, 99, 71, 0.5);">Intro to Fab Lab</h1>
+        <div  style="background-color: #FAFAD2;">
+          <p style="text-decoration: underline;text-align:center;font-size=90%;padding-top:10px"> To summarize, <b>IMPORTANT</b> points are mentioned below:</p>
+          <li> It places the <b>RESPONSIBILITY</b> for workplace safety on all stakeholders along lines of control at the workplace. </li>
+          <li> Focuses on Workplace Safety & Health systems <b>(WSH)</b> and outcomes, rather than merely on compliance.</li>
+          <li> It imposes higher <b>PENALTIES</b> for non-compliance and risky behaviour.</li>
+          <li> Report <b>ALL</b> work related injuries<b>(no matter how minor)</b>, promptly to technical support staff or supervising staff.</li>
+          <li> Contact the school’s general office, <b>67721206</b> or call <b>67721234</b> when treatment to injury is required.</li>
+          <li> Proper attire is a <b>MUST</b>(example, long pants, no slippers, tied hair and more)</li>
+          <p style="text-align:center;font-size=90%;padding-bottom:10px">First of all, Safety Assessment needs to be done at the lab for teacher to verify that u have completed and get the passing percentage of <b>80%.</b></p>
+          <p style="text-decoration: underline;text-align:center;font-size=90%;padding-bottom:10px">Safety Assessment guideline:</p>
+            <ol>
+              <li>Login<a href="https://www.sp.edu.sg/sp/about-sp/e-services">E-service@SP(BlackBoard)</a> find module EP1000</li>
+              <li>Under Learning resoursec and look for Fablab Safety </li>
+              <li>Read all documents provided to be familiar about lab rules</li>
+            </ol>
+        </div>
+
+        <h1 style="text-align:center;font-size=400%;color:red;background-color:rgba(255, 99, 71, 0.5);"><b>Emergency Procedures</b></h1>
+        <div  style="background-color: #FAFAD2;">
+          <li> For Ambulance call <span style="color:red;font-weight:bold">995</span></li>
+          <li> For SCDF call <span style="color:red;font-weight:bold">995</span></li>
+          <li> For Police call <span style="color:red;font-weight:bold">999</span</li>
+          <li> For SCDF call <span style="color:red;font-weight:bold">6772-1234</span></li>
+        </div>
+
+        <h1 style="text-align:center;font-size=400%;color:#FAFAD2;background-color:rgba(255, 99, 71, 0.5);"><b>Project Management</b></h1>
+        <div  style="background-color: #FAFAD2;">
+          <p style="text-align:center;font-size=90%;padding-top:10px"> As it means, it helps to plan your tasks and projects which would lead to completion of work.</p>
+          <li> Time management(determine the quantity and quality of projects)</li>
+          <li> Resources(materials or situations, need to find out what materials are suitable for different projects)</li>
+        </div>
+
+        <h1 style="text-align:center;font-size=400%;color:#FAFAD2;background-color:rgba(255, 99, 71, 0.5);">Assignment 1</h1>
+        <div class="table">
+            <table>
+                <tr>
+                    <th>Time(approximate)</th>
+                    <th>Task</th>
+                </tr>
+                <tr>
+                    <td>30~50min</td>
+                    <td>Instalation - Fusion 360 & Text Editor</td>
+                </tr>
+                <tr>
+                    <td>45~60min</td>
+                    <td>Go through the Lab Safety Slides and Handbook, familarise with Rules in Lab</td>
+                </tr>
+                <tr>
+                    <td>10~15min</td>
+                    <td>Research about neccesary tool needed in tool-kit</td>
+                </tr>
+                <tr>
+                    <td>10min</td>
+                    <td>Create a github account</td>
+                </tr>
+
+
+
+            </table>
+        </div>
+
+        <h1 style="text-align:center;font-size=400%;color:#FAFAD2;background-color:rgba(255, 99, 71, 0.5);"><b>Text Editor</b></h1>
+
+        <div class="table">
+            <table>
+                <tr>
+                    <th colspan="2" style="text-align:center;">Web Editor</th>
+                </tr>
+                <tr>
+                    <td><a href="https://atom.io/"><img src="https://miro.medium.com/max/4800/1*cEUaEzZfhfuX8f710WJv2Q.png" style="width:120px;height:120px;img-align:center"></a></td>
+                    <td> Atom</td>
+                </tr>
+                <tr>
+                    <td><a href="http://brackets.io/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTsN2yJHuxfxT5zcHL-6xhq0uUKJV7lBPOX7GfgRI8r-5bhMm0N&usqp=CAU" style="width:120px;height:120px;img-align:center"></a></td>
+                    <td>Brackets</td>
+                </tr>
+                <tr>
+                    <td><a href="https://notepad-plus-plus.org/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSF_MiPjrBX8j2K1KsDb74byyHVFya0qDi8JHDxQ1PB71NMuJqY&usqp=CAU" style="width:120px;height:120px;img-align:center"></a></td>
+                    <td>Notepad++</td>
+                </tr>
+                <tr>
+                    <td><a href="https://www.sublimetext.com/"><img src="https://cdn.worldvectorlogo.com/logos/sublime-text.svg" style="width:120px;height:120px;img-align:center"></a></td>
+                    <td>Sublimetext</td>
+                </tr>
+                <tr>
+
+
+            </table>
+        </div>
+
+        <h1 style="text-align:center;font-size=400%;color:#FAFAD2;background-color:rgba(255, 99, 71, 0.5);"><b>Autodesk Fusion 360</b></h1>
+        <div  style="background-color: #FAFAD2;">
+          <p style="text-decoration:underline;text-align:center;font-size=90%;padding-top:10px"><b>This is a Computer Aided design(CAD) tool for 3D modelling(digitally design your project)</b></p>
+          <li> Register as a student (It is free for 3 years, else need to pay monthly)</li>
+          <li style = "padding-bottom: 50px"> Installation</li>
+
+        </div>
+  </div>
+</body>
+</html>
