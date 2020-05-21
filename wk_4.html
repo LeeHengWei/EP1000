@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function startTime() {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('txt').innerHTML =
+                h + ":" + m + ":" + s;
+            var t = setTimeout(startTime, 500);
+        }
+        function checkTime(i) {
+            if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
+            return i;
+        }
+    </script>
+</head>
+<body onload="startTime()">
+
+    <style>
+        img
+        {
+          max-width: 100%;
+          height: auto;
+        }
+        table {
+            margin-left: auto;
+            margin-right: auto;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .table:hover {
+            opacity: 0.8;
+        }
+
+        td, th {
+            border: 1px solid #a9a9a9;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+            padding: 8px;
+        }
+
+        *
+        tr:nth-child(odd) {
+            background-color: #FAFAD2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        body {
+            font-family: arial, sans-serif;
+            background-image: url('https://www.ceeri.res.in/wp-content/uploads/2018/03/Flexible-Electronics-Background.png');
+            background-attachment: fixed;
+        }
+
+        .table {
+            transition: 0.3s;
+            border: 1px solid black;
+            margin: auto;
+        }
+
+        h1 {
+            text-shadow: 1px 1px 2px black, 0 0 25px yellow, 0 0 5px grey;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+        }
+
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: 1px solid black;
+            outline: none;
+            background-color: #DDDDDD;
+            color: #FAFAD2;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+        }
+
+            #myBtn:hover {
+                background-color: darkgray;
+            }
+
+            ul
+            {
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+              width: 25%;
+              background-color:rgba(0, 0, 0,0.5);
+              position: fixed;
+              height: 100%;
+              overflow: auto;
+            }
+
+            div li, dd, dt
+            {
+              style=font-size:130%;
+              margin-left:10%;
+              margin-right:10%;
+              padding:10px
+
+            }
+
+            li a
+            {
+              display: block;
+              color: #42d4f5;
+              padding: 8px 16px;
+              text-decoration: none;
+             }
+
+             li a.active
+             {
+               background-color: #4CAF50;
+               color: white;
+             }
+
+             li a:hover:not(.active)
+             {
+               background-color: #555;
+               color: white;
+             }
+
+    </style>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><b>^</b></button>
+    <script>
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+    <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="wk_1.html">Project Management and Lab Safety</a></li>
+    <li><a href="wk_2.html">HTML editor</a></li>
+    <li><a href="wk_3.html">Version Control</a></li>
+    <li><a href="wk_4.html">Computer Aided Design and Photoshop</a></li>
+  </ul>
+
+  <marquee style="background-color:rgba(255, 99, 71, 0.5); margin-bottom: 40px; white-space:nowrap;">
+      <h3 style="text-align:center;font-size=20;color:#FAFAD2; ">Computer Aided Design and Photoshop <span style="padding-left:20%">Current Time: <span id="txt"></span></span></h3>
+  </marquee>
+
+<div style="margin-left:25%;padding:1px 16px;height:1000px;">
+    <div style="background-color: rgba(100, 100, 100, 0.8);width:90%;margin: auto;padding:10px;border-radius: 8px; border:1px solid #FAFAD2;">
+        <br>
+        <h1 style="text-align:center;font-size=150%;color:#FAFAD2;">WEEK 4</h1>
+        <h1 style="text-align:center;font-size=200%;color:#FAFAD2;">FUSION 360 AND GIMP</h1>
+        </br>
+
+        <h1 style="text-align:center;font-size=400%;color:#FAFAD2;background-color:rgba(255, 99, 71, 0.5);">Computer Graphic</h1>
+        <div  style="background-color: #FAFAD2;">
+          <h2 style="text-decoration: underline;text-align:center;font-size=120%;padding-bottom:10px"><b>What is Computer Graphic ??</b></h2>
+          <li>It is an art of drawing pictures, lines, charts which use computers with the help of programming.</li>
+          <li>Computer graphics is made up of number of pixels, which is the smallest graphical picture or unit represented on the computer screen.</li>
+          <li>Basically,there are two Kinds of Computer Graphics- raster (composed of pixels) and vector (composed of paths</li>
+
+          <p style="text-decoration: underline;text-align:center;font-size=120%;padding-bottom:10px"><b>Image:</b></p>
+              <img src="raster_out.jpg" style="width:30%;height:30%;padding-bottom:20px;margin-left:auto;margin-right-right:auto;"></img>
+              <li> If is raster images, zoom in and the edge begin to show and the edges which no longer look smooth</li>
+              <img src="raster_in.jpg" style="width:30%;height:30%;padding-bottom:20px;margin-left:auto;margin-right-right:auto;">
+              <li> If is vector images, zoom in the edges remain crisp and sharp no matter the size</li>
+              <img src="vector_in.jpg" style="width:30%;height:30%;padding-bottom:20px;margin-left:auto;margin-right-right:auto;">
+        </div>
+
+              <h1 style="text-align:center;font-size=400%;color:#FAFAD2;background-color:rgba(255, 99, 71, 0.5);"><b>Software for Computer Graphic</b></h1>
+        <div  style="background-color: #FAFAD2;">
+              <div class="table">
+                  <table>
+                      <tr>
+                          <th colspan="2" style="text-align:center;">Raster</th>
+                      </tr>
+                      <tr>
+                          <td><a href="https://www.gimp.org/"><img src="data:image/jpeg;base64,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" style="width:120px;height:120px;img-align:center"></a></td>
+                          <td> GIMP</td>
+                      </tr>
+                      <tr>
+                          <th colspan="2" style="text-align:center;">Vector</th>
+                      </tr>
+                      <tr>
+                          <td><a href="https://inkscape.org/"><img src="data:image/jpeg;base64,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" style="width:120px;height:120px;img-align:center"></a></td>
+                          <td>Inkscape</td>
+                      </tr>
+                  </table>
+              </div>
+        </div>
+
+              <h1 style="text-align:center;font-size=400%;color:#FAFAD2;background-color:rgba(255, 99, 71, 0.5);"><b>GIMP</b></h1>
+        <div style="background-color: #FAFAD2;">
+              <p style="text-decoration: underline;text-align:center;font-size=90%;padding-bottom:10px"><b>Images use for exapmle:</b></p>
+              <ol>
+                  <img src="newyear.jpg" style="width:30%;height:30%;padding-bottom:20px;margin-left:auto;margin-right-right:auto;"><img src="background2.jpg" style="width:25%;height:25%;padding-bottom:20px;margin-left:auto;margin-right-right:auto;"></img>
+                  <li>Open the photo we want to edit on, and use the Free select tool to mark out the selected profile</li>
+                  <img src="Inkedselectprofile.jpg" style="width:80%;height:80%;padding-bottom:20px;margin-left:auto;margin-right-right:auto;"></img>
+                  <li>After markout, go select bar > choose invert, will see the background is selected instead of profile</li>
+                  <li>Go edit > choose clear, background should be cleared and left the selected profile</li>
+                  <img src="human.jpg" style="width:30%;height:30%;padding-bottom:20px;margin-left:auto;margin-right-right:auto;"></img>
+                  <li>Drag and drop the image into the layer</li>
+                  <img src="addbackground.jpg" style="width:80%;height:80%;padding-bottom:20px;margin-left:auto;margin-right-right:auto;"></img>
+                  <li>Now most of parts are done, now edit through scalling, brightness and more</li>
+                  <li>Lastly, export the file as JPG or files we want</li>
+                  <img src="xin.jpg"></img>
+
+              </ol>
+
+              <div class="table">
+                  <table>
+                      <tr>
+                        <th colspan="2" style="text-align:center;">Youtube Video to learn</th>
+                      </tr>
+                      <tr>
+                          <td rowspan="2"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQMAAADCCAMAAAB6zFdcAAAAflBMVEX/////AAD/+fn/ra3/kZH/3Nz/7Oz/sbH/nJz/p6f/1NT/EBD/zMz/vr7/4eH/3d3/xMT/pKT/lZX/8fH/cnL/0ND/jIz/trb/eHj/ISH/QkL/WFj/h4f/amr/fHz/R0f/ZGT/Kyv/OTn/UlL/MjL/RET/Xl7/goL/VFT/e3vLg+1WAAADB0lEQVR4nO3ca1ObUBSFYS4JEAKEgDEaL9Haavv//2CNU6fVOuPeJxz3bH2fzzrjWhLOjZAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgq8jGolvVTd+32zLPF+t1VQ3D7NEwVNV6kefltu37pp6vijGz/mMnVNTtenZ2v79dpmrnu4uTy6psOusQR+gfvumDv2l5lbu8MPKJ8j+7dtdCtpu4gkeNdSidYvoGHpXWsVSiVODrSriP1EHq556wiVVBemYdTewuWgduLoQxXgVpbh1OqI3YwY11OKHLiB2k1uGE9jE7KKzTycSswMkUIeYt0ctNsY7awaV1PJGYw4KXgWERtYOddTyRU1GW76ElWMcTOZNFKT9zBxeiKFnoXMrFiuGHOEohq+slF5Okc8W/s5H98L/mxvFEZFGeL2n1KFKbhhPSdZBk17oOestsUsoOkqRTLbJau2RimbqDJOkVp1AeNpeFS6ZXQ1wl7mBhE0tFeLTwepjPToQdrE1S6XRhHSTJXHY6WRlk0gruQLjiHD48kd48vIMkmb3/i7MPzhPiqA6S8d3bwunHxglyXAfdu+czn70DyeDg4bNwxD1RNEnwcE8MnB+IJ4sexsbADsSLBg9zpKC5smLx6GGuHLJm0mwieFgz6dfOus0kD2tnbQfaTcVPuIei3lx2sZem2VMNOGRYGccTkQ1yhw7qkMMmF3vrsgfzsmS8CWjAyRmL7KwtG4IacHLWJtgDOMLSOp5I3LP3vXU8kT5qB1fW8USEGwiBPGyhiBcMgXw8kxX32byNdTqZiI9sp+lonU5G9kBSIOtwQjEHBh/DQtyboosdlIOwhYCIdTSxeDMEH7ODJ7JlUwDrYBq3cSpw8Uzas0z/zJ2Aj+8u/DX9fXHp7/vvzVRfev/Dwxnb/7rqJuCtB2+5O/X2MXihqNt8eDi5UL8F4nz38+rXbL1tOhc7iHJPrwOZ15um7/u23ZZlflCW28NbQPpmU89XXTE6WRcBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBp/AbhqSeqCnPYIQAAAABJRU5ErkJggg==" style="width:120px;height:120px;img-align:center"></td>
+                          <td><a href="https://www.youtube.com/watch?v=Q8C0LJPpr64&feature=youtu.be">How to use GIMP</a></td>
+
+                      </tr>
+                      <tr>
+                          <td><a href="https://www.youtube.com/watch?v=IeABb8cwdUg&feature=youtu.be">Learn GIMP in 30 Minutes</a></td>
+                      </tr>
+                  </table>
+
+                </div>
+        </div>
+          <h1 style="text-align:center;font-size=400%;color:#FAFAD2;background-color:rgba(255, 99, 71, 0.5);">Fusion 360</h1>
+          <div  style="background-color: #FAFAD2;">
+                <li> It is called the combination of different Autodesk software (e.g. AutoCAD, Inventor,..)</li>
+                <li> In this module, we will be mostly using fusion 360</li>
+                <li> <b>Fusion 360 is free for educational use, provided you sign up using ichat as a registered student of Singapore Polytechnic. </b></li>
+                <img src="fusion.jpg" style="width:100%;padding-bottom:20px;">
+          </div>
+
+          <h1 style="text-align:center;font-size=400%;color:#FAFAD2;background-color:rgba(255, 99, 71, 0.5);">Quick guide of Creating 3D model in Fusion 360</h1>
+          <div style="background-color: #FAFAD2;">
+
+            <dl>
+              <dt><b>1. Extrusion</b></dt>
+              <dd>- Extrusion is the common command or steps to create a 3D project from a 2D sketch</dd>
+              <dd>- Create a 2D sketch in any planes(example:XY plane)</dd>
+              <dt>- Extrude function to adjust the distance</dt>
+              <dt>(Types of Extrusion)</dt>
+              <dd>- New Body (create a new body)
+              <dd>- Join (Join the extruded body to an existing body)</dd>
+              <dd>- Cut (Remove parts through extrusion)</dd>
+              <img src="fusion_image/fusionsketch.jpg" style="width:50%;padding-bottom:20px;"><img src="fusion_image/fusionextrude.jpg" style="width:50%;padding-bottom:20px;"></img>
+
+              <dt><b>2. Revolve</b></dt>
+              <dd>- Revolve is a step to create 3D project and revolve(rotate) based on reference axis(turning point) from a 2D sketch</dd>
+              <dd>- Create a 2D sketch in any planes(example:XY plane)</dd>
+              <dt>(Types of Revolve)</dt>
+              <dd>- Angle (Create a 3D model through revolve at certain angle required)
+              <dd>- Full (Revolve a 2D sketch to be a full 360 degree 3D model)</dd>
+              <dd>- To (Revolve to a certain plan or axis)</dd>
+              <img src="fusion_image/fusionsketch.jpg" style="width:50%;padding-bottom:20px;"><img src="fusion_image/fusionrevolve.jpg" style="width:50%;padding-bottom:20px;"></img>
+
+              <dt><b>3. Lofting</b></dt>
+              <dd>- Create model in plane and outline the model shape</dd>
+              <dd>- Required offset plane concept to use loft</dd>
+              <img src="fusion_image/fusionloft.jpg" style="width:50%;padding-bottom:20px;"><img src="fusion_image/fusionloft1.jpg" style="width:50%;padding-bottom:20px;padding-top:20px"></img>
+
+              <dt><b>4. Sectional Analysis</b></dt>
+              <dd>- Able to check the internal design where couldn't see through normal home view</dd>
+              <dd>- Inspect function > Select parts or bodies > Sectional Analysis</dd>
+              <img src="fusion_image/fusionshell.jpg" style="width:50%;padding-bottom:20px;"><img src="fusion_image/fusionshell1.jpg" style="width:50%;padding-bottom:20px;padding-top:20px"></img>
+
+            </dl>
+
+          </div>
+
+            <h1 style="text-align:center;font-size=400%;color:#FAFAD2;background-color:rgba(255, 99, 71, 0.5);">Sample of Fusion 360:</h1>
+            <div style="background-color: #FAFAD2;">
+              <p style="text-decoration: underline;text-align:center;font-size=120%;padding-bottom:10px"><b><a href="Exercise_1.f3d">Example 1:</a></b></p>
+              <iframe src="https://ichat854.autodesk360.com/shares/public/SH56a43QTfd62c1cd968a198d9efd9fc7548?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0" style="padding-bottom:30px;display:block;margin-left:auto;margin-right:auto;"></iframe>
+              <p style="text-decoration: underline;text-align:center;font-size=120%;padding-bottom:10px"><b><a href="Exercise_2.f3d">Example 2:</a></b></p>
+              <iframe src="https://ichat854.autodesk360.com/shares/public/SH56a43QTfd62c1cd968888ba524030e0c02?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0" style="padding-bottom:30px;display:block;margin-left:auto;margin-right:auto;"></iframe>
+              <p style="text-decoration: underline;text-align:center;font-size=120%;padding-bottom:10px"><b><a href="Exercise_3.f3d">Example 3:</a></b></p>
+              <iframe src="https://ichat854.autodesk360.com/shares/public/SH56a43QTfd62c1cd968a602acd1306309b7?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0" style="padding-bottom:30px;display:block;margin-left:auto;margin-right:auto;"></iframe>
+              <p style="text-decoration: underline;text-align:center;font-size=120%;padding-bottom:10px"><b><a href="fidget_spinner.f3d">Fidget Spinner:</a></b></p>
+              <iframe src="https://ichat854.autodesk360.com/shares/public/SH56a43QTfd62c1cd968067d2b3e8dc0c9a5?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0" style="padding-bottom:30px;display:block;margin-left:auto;margin-right:auto;"></iframe>
+              <p style="text-decoration: underline;text-align:center;font-size=120%;padding-bottom:10px"><b><a href="nametag v3.f3d">Nametag:</a></b></p>
+              <iframe src="https://ichat854.autodesk360.com/shares/public/SH56a43QTfd62c1cd968fceecbf0cfefe0e2?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0" style="padding-bottom:30px;display:block;margin-left:auto;margin-right:auto;"></iframe>
+              <p style="text-decoration: underline;text-align:center;font-size=120%;padding-bottom:10px"><b><a href="assembly v2.f3z">Assembly File:</a></b></p>
+              <iframe src="https://ichat854.autodesk360.com/shares/public/SH56a43QTfd62c1cd968883e66dad0068b88?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0" style="padding-bottom:30px;display:block;margin-left:auto;margin-right:auto;"></iframe>
+              <p style="text-decoration: underline;text-align:center;font-size=120%;padding-bottom:10px"><b><a href="knight chess piece.f3d">Knight chess piece:</a></b></p>
+              <iframe src="https://ichat854.autodesk360.com/shares/public/SH56a43QTfd62c1cd968a3ab28f5cf8ee864?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0" style="padding-bottom:30px;display:block;margin-left:auto;margin-right:auto;"></iframe>
+
+
+            </div>
+
+          </div>
+</body>
+</html>
