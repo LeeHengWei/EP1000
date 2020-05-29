@@ -180,11 +180,9 @@
         <br>
         <h1 style="text-align:center;font-size=200%;color:#FAFAD2;">LAPTOP STAND</h1>
         </br>
-
-        <h1 style="text-align:center;font-size=400%;color:#FAFAD2;background-color:rgba(255, 99, 71, 0.5);">Design steps</h1>
+5
+        <h1 style="text-align:center;font-size=400%;color:#FAFAD2;background-color:rgba(255, 99, 71, 0.5);">Leg Support</h1>
         <div  style="background-color: #FAFAD2;">
-          <p style="text-decoration: underline;text-align:center;font-size=120%;padding-bottom:10px"><b>Leg Support</b></p>
-          <li>Create a new component, name it as leg support</li>
           <li>Measure a suitable height to place the computer, create a support design as below</li>
           <img src="laptopdesign/laptopsketch.jpg" style="width:50%;height:50%;padding-bottom:20px;padding-top:20px;display:block;margin-left:auto;margin-right:auto;"></img>
           <li>After contraint all sketches and before extrude, go to "Modify" > "Change Parameter"</li>
@@ -195,36 +193,50 @@
           <li>Next, use "join" function, hide leg support 2, choose one side of the support as one reference point, unhide support 2 and hide support 1, choose <b>opposite</b>face(side)</li>
           <li>Along Z-axis distance, instead of distance entered, use defined parameter name("legdistance" in this case)</li>
           <img src="laptopdesign/joint.jpg" style="width:50%;height:50%;padding-bottom:20px;padding-top:20px;display:block;margin-left:auto;margin-right:auto;"></img>
-          <p style="text-decoration: underline;text-align:center;font-size=120%;padding-bottom:10px"><b>Table board( Top )</b></p>
-          <li>Create new component, name top(to place computer)</li>
-          <li>Create sketch on the slanted surface instead of horizontal</li>
-          <img src="laptopdesign/laptopsketch2.jpg" style="width:50%;height:50%;padding-bottom:20px;padding-top:20px;display:block;margin-left:auto;margin-right:auto;"></img>
-          <li>Use "Create > "Project include, include another face</li>
-          <li>Create rectangle and colinear to the side(so when the legsupport distance increase, this component will increase also)</li>
-          <li>Use contruction line contraint to all midpoint of rectangle</li>
-          <li>Next create rectangle(act as join), which width is colinear to the width of leg support</li>
-          <img src="laptopdesign/join.jpg" style="width:50%;height:50%;padding-bottom:20px;padding-top:20px;display:block;margin-left:auto;margin-right:auto;"></img>
-          <li>Mirror the small rectangle(join) using the the contruction line as reference point</li>
-          <img src="laptopdesign/laptopsketch1.jpg" style="width:50%;height:50%;padding-bottom:20px;padding-top:20px;display:block;margin-left:auto;margin-right:auto;"></img>
-          <li>Extrude inwards the rectangle other than the small rectangle(not cut but new body), distance follow("legwidth" instead distance)</li>
-          <li>Next,"modify" tool > "combine" tool </li>
-          <li>Target body is the one need to be modified, Tool body is the one to make as reference(check the keep tools so will not loose the part)</li>
-          <li>Hide the top board or tool body to see the changes made</li>
-          <img src="laptopdesign/modify.jpg" style="max-height:350px;height:100%;width:50%;padding-bottom:20px;display:block;margin-left:auto;margin-right:auto;"></img>
-          <img src="laptopdesign/modify1.jpg" style="max-height:350px;height:100%;width:50%;padding-bottom:20px;display:block;margin-left:auto;margin-right:auto;"></img>
-          <p style="text-decoration: underline;text-align:center;font-size=120%;padding-bottom:10px"><b>Bottom Support</b></p>
-          <li>Using the support as reference, offset plane from it using parameter or distance</li>
-          <li>Create sketch on that plan, create a rectangular and colinear contraint similar to previous steps</li>
-          <li>Sketch one line across the midpoint of rectangle</li>
-          <li>Extrude symmetric the designated sketches, except for small rectangle(join) to create the support (distance use legwidth parameter)</li>
-          <img src="laptopdesign/extrude.jpg" style="max-height:350px;height:100%;width:50%;padding-bottom:20px;display:block;margin-left:auto;margin-right:auto;"></img>
-          <li>Next, use midplane to create a plane, use front and back plane of side support as reference</li>
-          <li>Mirror the created bottom support using midplane as reference, and modify using similar steps mentioned</li>
-          <li>Lastly fillet or chamfer the corners</li>
+        </div>
 
-          <p style="text-decoration: underline;text-align:center;font-size=120%;padding-bottom:10px"><b><a href="laptop_stand v2.f3d">Laptop Stand:</a></b></p>
-          <iframe src="https://ichat854.autodesk360.com/shares/public/SH56a43QTfd62c1cd968a456c6d7ccc4f19f?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0" style="padding-bottom:30px;display:block;margin-left:auto;margin-right:auto;"></iframe>
- </div>
+          <h1 style="text-align:center;font-size=400%;color:#FAFAD2;background-color:rgba(255, 99, 71, 0.5);"><b>Table board( Top )</b></h1>
+          <div  style="background-color: #FAFAD2;">
+            <li>Create new component, name top(to place computer)</li>
+            <li>Create sketch on the slanted surface instead of horizontal</li>
+            <img src="laptopdesign/laptopsketch2.jpg" style="width:50%;height:50%;padding-bottom:20px;padding-top:20px;display:block;margin-left:auto;margin-right:auto;"></img>
+            <li>Use "Create > "Project include, include another face</li>
+            <li>Create rectangle and colinear to the side(so when the legsupport distance increase, this component will increase also)</li>
+            <li>Use contruction line contraint to all midpoint of rectangle</li>
+            <li>Next create rectangle(act as join), which width is colinear to the width of leg support</li>
+            <img src="laptopdesign/join.jpg" style="width:50%;height:50%;padding-bottom:20px;padding-top:20px;display:block;margin-left:auto;margin-right:auto;"></img>
+            <li>Mirror the small rectangle(join) using the the contruction line as reference point</li>
+            <img src="laptopdesign/laptopsketch1.jpg" style="width:50%;height:50%;padding-bottom:20px;padding-top:20px;display:block;margin-left:auto;margin-right:auto;"></img>
+            <li>Extrude inwards the rectangle other than the small rectangle(not cut but new body), distance follow("legwidth" instead distance)</li>
+            <li>Next,"modify" tool > "combine" tool </li>
+            <li>Target body is the one need to be modified, Tool body is the one to make as reference(check the keep tools so will not loose the part)</li>
+            <li>Hide the top board or tool body to see the changes made</li>
+            <img src="laptopdesign/modify.jpg" style="max-height:350px;height:100%;width:50%;padding-bottom:20px;display:block;margin-left:auto;margin-right:auto;"></img>
+            <img src="laptopdesign/modify1.jpg" style="max-height:350px;height:100%;width:50%;padding-bottom:20px;display:block;margin-left:auto;margin-right:auto;"></img>
+          </div>
+
+          <h1 style="text-align:center;font-size=400%;color:#FAFAD2;background-color:rgba(255, 99, 71, 0.5);"><b>Bottom Support</b></h1>
+          <div  style="background-color: #FAFAD2;">
+            <li>Using the support as reference, offset plane from it using parameter or distance</li>
+            <li>Create sketch on that plan, create a rectangular and colinear contraint similar to previous steps</li>
+            <li>Sketch one line across the midpoint of rectangle</li>
+            <li>Extrude symmetric the designated sketches, except for small rectangle(join) to create the support (distance use legwidth parameter)</li>
+            <img src="laptopdesign/extrude.jpg" style="max-height:350px;height:100%;width:50%;padding-bottom:20px;display:block;margin-left:auto;margin-right:auto;"></img>
+            <li>Next, use midplane to create a plane, use front and back plane of side support as reference</li>
+            <li>Mirror the created bottom support using midplane as reference, and modify using similar steps mentioned</li>
+            <li>Lastly fillet or chamfer the corners</li>
+
+            <p style="text-decoration: underline;text-align:center;font-size=120%;padding-bottom:10px"><b><a href="laptop_stand v2.f3d">Laptop Stand:</a></b></p>
+            <iframe src="https://ichat854.autodesk360.com/shares/public/SH56a43QTfd62c1cd968a456c6d7ccc4f19f?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0" style="padding-bottom:30px;display:block;margin-left:auto;margin-right:auto;"></iframe>
+          </div>
+
+          <h1 style="text-align:center;font-size=400%;color:#FAFAD2;background-color:rgba(255, 99, 71, 0.5);"><b>Animation</b></h1>
+          <div  style="background-color: #FAFAD2;">
+            <li>Under Design Tab, choose Animation</li>
+            <li>To move a component, select it and press transform, which is similar to move tool. Once it is move, it will be shown on the timeline where can adjust the duration</li>
+            <li>There is also auto explode which fusion 360 will automatically explode the  components</li>
+            <img src="laptopdesign/animation.jpg" style="width:50%;height:50%;padding-bottom:20px;padding-top:20px;display:block;margin-left:auto;margin-right:auto;"></img>
+          </div>
 
           <h1 style="text-align:center;font-size=400%;color:#FAFAD2;background-color:rgba(255, 99, 71, 0.5);">Learn More</h1>
           <div  style="background-color: #FAFAD2;">
