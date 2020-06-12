@@ -173,73 +173,68 @@
   </ul>
 
   <marquee style="background-color:rgba(255, 99, 71, 0.5); margin-bottom: 40px; white-space:nowrap;">
-      <h3 style="text-align:center;font-size=20;color:#FAFAD2; ">Welcome to Laptop Stand design <span style="padding-left:20%">Current Time: <span id="txt"></span></span></h3>
+      <h3 style="text-align:center;font-size=20;color:#FAFAD2; ">Welcome to Box <span style="padding-left:20%">Current Time: <span id="txt"></span></span></h3>
   </marquee>
 
 <div style="margin-left:25%;padding:1px 16px;height:1000px;">
     <div style="background-color: rgba(100, 100, 100, 0.8);width:90%;margin: auto;padding:10px;border-radius: 8px; border:1px solid #FAFAD2;">
         <br>
-        <h1 style="text-align:center;font-size=200%;color:#FAFAD2;">LAPTOP STAND</h1>
+        <h1 style="text-align:center;font-size=200%;color:#FAFAD2;">Box</h1>
         </br>
 5
-        <h1 style="text-align:center;font-size=400%;color:#FAFAD2;background-color:rgba(255, 99, 71, 0.5);">Leg Support</h1>
+        <h1 style="text-align:center;font-size=400%;color:#FAFAD2;background-color:rgba(255, 99, 71, 0.5);">Parameter Setting</h1>
         <div  style="background-color: #FAFAD2;">
-          <li>Measure a suitable height to place the computer, create a support design as below</li>
-          <img src="laptopdesign/laptopsketch.jpg" style="width:50%;height:50%;padding-bottom:20px;padding-top:20px;display:block;margin-left:auto;margin-right:auto;"></img>
-          <li>After contraint all sketches and before extrude, go to "Modify" > "Change Parameter"</li>
-          <li>To summarise, parameters allows edit on the extrude distance without using edit feature or extrude, which is easier to change the thickness of certain bodies or component</li>
-          <img src="laptopdesign/parameter.jpg" style="width:50%;height:50%;padding-bottom:20px;padding-top:20px;display:block;margin-left:auto;margin-right:auto;"></img>
-          <li>When extrude, instead of entering distance(thickness), enter "legwidth"(according to the name given in parameter)</li>
-          <li>After extrude, copy paste this component to same design, remember not to move the copied component.</li>
-          <li>Next, use "join" function, hide leg support 2, choose one side of the support as one reference point, unhide support 2 and hide support 1, choose <b>opposite</b>face(side)</li>
-          <li>Along Z-axis distance, instead of distance entered, use defined parameter name("legdistance" in this case)</li>
-          <img src="laptopdesign/joint.jpg" style="width:50%;height:50%;padding-bottom:20px;padding-top:20px;display:block;margin-left:auto;margin-right:auto;"></img>
+          <li>Go modify > Change Parameter</li>
+          <li><b>Parameter: Enable user to change dimension easily by editing on parameter instead of choosing different faces to change dimensions</b></li>
+          <li><b>Aware where is length, width and height</b></li>
+          <li>Edit certain specification like height,length, weight and thickness</li>
+          <img src="boxdesign/parameter.jpg" style="width:50%;height:50%;padding-bottom:20px;padding-top:20px;display:block;margin-left:auto;margin-right:auto;"></img>
         </div>
 
-          <h1 style="text-align:center;font-size=400%;color:#FAFAD2;background-color:rgba(255, 99, 71, 0.5);"><b>Table board( Top )</b></h1>
+          <h1 style="text-align:center;font-size=400%;color:#FAFAD2;background-color:rgba(255, 99, 71, 0.5);"><b>Front Plate</b></h1>
           <div  style="background-color: #FAFAD2;">
-            <li>Create new component, name top(to place computer)</li>
-            <li>Create sketch on the slanted surface instead of horizontal</li>
-            <img src="laptopdesign/laptopsketch2.jpg" style="width:50%;height:50%;padding-bottom:20px;padding-top:20px;display:block;margin-left:auto;margin-right:auto;"></img>
-            <li>Use "Create > "Project include, include another face</li>
-            <li>Create rectangle and colinear to the side(so when the legsupport distance increase, this component will increase also)</li>
-            <li>Use contruction line contraint to all midpoint of rectangle</li>
-            <li>Next create rectangle(act as join), which width is colinear to the width of leg support</li>
-            <img src="laptopdesign/join.jpg" style="width:50%;height:50%;padding-bottom:20px;padding-top:20px;display:block;margin-left:auto;margin-right:auto;"></img>
-            <li>Mirror the small rectangle(join) using the the contruction line as reference point</li>
-            <img src="laptopdesign/laptopsketch1.jpg" style="width:50%;height:50%;padding-bottom:20px;padding-top:20px;display:block;margin-left:auto;margin-right:auto;"></img>
-            <li>Extrude inwards the rectangle other than the small rectangle(not cut but new body), distance follow("legwidth" instead distance)</li>
-            <li>Next,"modify" tool > "combine" tool </li>
-            <li>Target body is the one need to be modified, Tool body is the one to make as reference(check the keep tools so will not loose the part)</li>
-            <li>Hide the top board or tool body to see the changes made</li>
-            <img src="laptopdesign/modify.jpg" style="max-height:350px;height:100%;width:50%;padding-bottom:20px;display:block;margin-left:auto;margin-right:auto;"></img>
-            <img src="laptopdesign/modify1.jpg" style="max-height:350px;height:100%;width:50%;padding-bottom:20px;display:block;margin-left:auto;margin-right:auto;"></img>
+            <li>Create new component, name "Front plate"</li>
+            <li>Create sketch on the ZX plane</li>
+            <li>Create a rectangle with dimension of "length" and "height"(dimension use follow parameter)</li>
+            <li>Extrude the image with distance of "thickness"</li>
+            <li>Next, create tabs on both sides and bottom, create rectangle(whixh is the tabs),dimension using the parameter(length of tabs on width is wtabs or length of tabs on height is htabs) by thickness</li>
+            <li>Extrude cut the tabs with dimension: thickness</li>
+            <li>Using rectangular pattern, enter the number as parameter(nltabs or nwtabs) and distance is (length - length of tab*3) or (width - width of tabs*3)depends on which dimensions use to refer</li>
+            <img src="boxdesign/Front.jpg" style="max-height:350px;width:50%;height:50%;padding-bottom:20px;padding-top:20px;display:block;margin-left:auto;margin-right:auto;"></img>
           </div>
 
-          <h1 style="text-align:center;font-size=400%;color:#FAFAD2;background-color:rgba(255, 99, 71, 0.5);"><b>Bottom Support</b></h1>
+          <h1 style="text-align:center;font-size=400%;color:#FAFAD2;background-color:rgba(255, 99, 71, 0.5);"><b>Right Plate</b></h1>
           <div  style="background-color: #FAFAD2;">
-            <li>Using the support as reference, offset plane from it using parameter or distance</li>
-            <li>Create sketch on that plan, create a rectangular and colinear contraint similar to previous steps</li>
-            <li>Sketch one line across the midpoint of rectangle</li>
-            <li>Extrude symmetric the designated sketches, except for small rectangle(join) to create the support (distance use legwidth parameter)</li>
-            <img src="laptopdesign/extrude.jpg" style="max-height:350px;height:100%;width:50%;padding-bottom:20px;display:block;margin-left:auto;margin-right:auto;"></img>
-            <li>Next, use midplane to create a plane, use front and back plane of side support as reference</li>
-            <li>Mirror the created bottom support using midplane as reference, and modify using similar steps mentioned</li>
-            <li>Lastly fillet or chamfer the corners</li>
+            <li>Create a new component on the right face of the front plate</li>
+            <li>Create rectangle and colinear to constraint the side and dimension the width</li>
+            <li>Create a circle and hole size dimension of "hole" (parameter setting) and dimension between 2 circles is at least 4 mm, extrude with "thicknes" dimension</li>
+            <li>Using same setting on desgin front, similar steps, add tabs but now only do on the width, or bottom face of the right plate will do</li>
+            <li>Extrude and rectangular pattern to form the tabs</li>
+            <img src="boxdesign/side.jpg" style="max-height:350px;height:100%;width:50%;padding-bottom:20px;display:block;margin-left:auto;margin-right:auto;"></img>
+            <li>Using the face of the front side and the other end of "Right" face to create midplane.</li>
+            <li>Mirror Front component using plane created and combine cut the design on "Right" component</li>
+            <li>Repeat the step to create plane as reference point to mirror "Right"component</li>
+         </div>
 
-            <p style="text-decoration: underline;text-align:center;font-size=120%;padding-bottom:10px"><b><a href="laptop_stand v2.f3d">Laptop Stand:</a></b></p>
-            <iframe src="https://ichat854.autodesk360.com/shares/public/SH56a43QTfd62c1cd968a456c6d7ccc4f19f?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0" style="padding-bottom:30px;display:block;margin-left:auto;margin-right:auto;"></iframe>
+          <h1 style="text-align:center;font-size=400%;color:#FAFAD2;background-color:rgba(255, 99, 71, 0.5);"><b>Bottom Plate</b></h1>
+          <div  style="background-color: #FAFAD2;">
+            <li>Create component at the bottom face of any component</li>
+            <li>Draw rectangle and dimension to have allowance on all sides，at least 5 to 10mm</li>
+            <li>Extrude the rectangle and combine cut the rectangle using other 4 components as reference(cutting tools)</li>
+            <img src="boxdesign/bottom.jpg" style="max-height:350px;width:50%;height:50%;padding-bottom:20px;padding-top:20px;display:block;margin-left:auto;margin-right:auto;"></img>
           </div>
 
-          <h1 style="text-align:center;font-size=400%;color:#FAFAD2;background-color:rgba(255, 99, 71, 0.5);"><b>Animation</b></h1>
+          <h1 style="text-align:center;font-size=400%;color:#FAFAD2;background-color:rgba(255, 99, 71, 0.5);"><b>Cover (TOP)</b></h1>
           <div  style="background-color: #FAFAD2;">
-            <li>Under Design Tab, choose Animation</li>
-            <li>To move a component, select it and press transform, which is similar to move tool. Once it is move, it will be shown on the timeline where can adjust the duration</li>
-            <li>There is also auto explode which fusion 360 will automatically explode the  components</li>
-            <img src="laptopdesign/animation.jpg" style="width:50%;height:50%;padding-bottom:20px;padding-top:20px;display:block;margin-left:auto;margin-right:auto;"></img>
-            <li>When complete, there is a publish tool which can create a video of own model with animation move edited by ourself</li>
-            <li>Upload it to youtube and people are able to view your video</li>
-            <p style="text-decoration: underline;text-align:center;font-size=120%;padding-bottom:10px"><b><a href="https://www.youtube.com/watch?v=-A-QKRhyXrU">Own video about laptop stand</a></b></p>
+            <li>Create component for making a cover</li>
+            <li>Offset plane from the inner back plane, offset a distance of 15mm</li>
+            <li>Create a rectangle and extrude with a dimension of "coverwidth"(parameter)</li>
+            <li>Create sketch on the side surface, sketch a circle and extrude out the as the attach join of the cover to the box</li>
+            <li>Create and using midplane of the cover, mirror the circular joint of the cover component</li>
+            <img src="boxdesign/cover.jpg" style="max-height:350px;width:50%;height:50%;padding-bottom:20px;padding-top:20px;display:block;margin-left:auto;margin-right:auto;"></img>
+
+            <p style="text-decoration: underline;text-align:center;font-size=120%;padding-bottom:10px"><b><a href="Box.f3d">Box Design:</a></b></p>
+            <iframe src="https://ichat854.autodesk360.com/shares/public/SH56a43QTfd62c1cd96834805d6dd0d0e5c1?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0" style="padding-bottom:30px;display:block;margin-left:auto;margin-right:auto;"></iframe>
           </div>
 
           <h1 style="text-align:center;font-size=400%;color:#FAFAD2;background-color:rgba(255, 99, 71, 0.5);">Learn More</h1>
@@ -251,11 +246,11 @@
                   </tr>
                   <tr>
                       <td rowspan="2"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQMAAADCCAMAAAB6zFdcAAAAflBMVEX/////AAD/+fn/ra3/kZH/3Nz/7Oz/sbH/nJz/p6f/1NT/EBD/zMz/vr7/4eH/3d3/xMT/pKT/lZX/8fH/cnL/0ND/jIz/trb/eHj/ISH/QkL/WFj/h4f/amr/fHz/R0f/ZGT/Kyv/OTn/UlL/MjL/RET/Xl7/goL/VFT/e3vLg+1WAAADB0lEQVR4nO3ca1ObUBSFYS4JEAKEgDEaL9Haavv//2CNU6fVOuPeJxz3bH2fzzrjWhLOjZAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgq8jGolvVTd+32zLPF+t1VQ3D7NEwVNV6kefltu37pp6vijGz/mMnVNTtenZ2v79dpmrnu4uTy6psOusQR+gfvumDv2l5lbu8MPKJ8j+7dtdCtpu4gkeNdSidYvoGHpXWsVSiVODrSriP1EHq556wiVVBemYdTewuWgduLoQxXgVpbh1OqI3YwY11OKHLiB2k1uGE9jE7KKzTycSswMkUIeYt0ctNsY7awaV1PJGYw4KXgWERtYOddTyRU1GW76ElWMcTOZNFKT9zBxeiKFnoXMrFiuGHOEohq+slF5Okc8W/s5H98L/mxvFEZFGeL2n1KFKbhhPSdZBk17oOestsUsoOkqRTLbJau2RimbqDJOkVp1AeNpeFS6ZXQ1wl7mBhE0tFeLTwepjPToQdrE1S6XRhHSTJXHY6WRlk0gruQLjiHD48kd48vIMkmb3/i7MPzhPiqA6S8d3bwunHxglyXAfdu+czn70DyeDg4bNwxD1RNEnwcE8MnB+IJ4sexsbADsSLBg9zpKC5smLx6GGuHLJm0mwieFgz6dfOus0kD2tnbQfaTcVPuIei3lx2sZem2VMNOGRYGccTkQ1yhw7qkMMmF3vrsgfzsmS8CWjAyRmL7KwtG4IacHLWJtgDOMLSOp5I3LP3vXU8kT5qB1fW8USEGwiBPGyhiBcMgXw8kxX32byNdTqZiI9sp+lonU5G9kBSIOtwQjEHBh/DQtyboosdlIOwhYCIdTSxeDMEH7ODJ7JlUwDrYBq3cSpw8Uzas0z/zJ2Aj+8u/DX9fXHp7/vvzVRfev/Dwxnb/7rqJuCtB2+5O/X2MXihqNt8eDi5UL8F4nz38+rXbL1tOhc7iHJPrwOZ15um7/u23ZZlflCW28NbQPpmU89XXTE6WRcBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBp/AbhqSeqCnPYIQAAAABJRU5ErkJggg==" style="width:120px;height:120px;img-align:center"></td>
-                      <td><a href="https://www.youtube.com/watch?v=7riGolu7BpA&feature=youtu.be">Designing a Lasercut Laptop Stand with Fusion 360</a></td>
+                      <td><a href="https://www.youtube.com/watch?v=sHCU5l3nqhc&feature=youtu.be">Fusion 360 Parametric Box for Laser Cutting</a></td>
 
                   </tr>
                   <tr>
-                      <td><a href="https://www.youtube.com/watch?v=0mW8Lpr6Ph8&feature=youtu.be">Creating an EXPLODED VIEW ANIMATION in Fusion 360</a></td>
+                      <td><a href="https://www.youtube.com/watch?v=FBSQGHBpBWg&feature=youtu.be">How To Design A Laser Cut Finger Joint Box Accurately</a></td>
                   </tr>
               </table>
             </div>
