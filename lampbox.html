@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function startTime() {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('txt').innerHTML =
+                h + ":" + m + ":" + s;
+            var t = setTimeout(startTime, 500);
+        }
+        function checkTime(i) {
+            if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
+            return i;
+        }
+    </script>
+</head>
+<body onload="startTime()">
+
+    <style>
+        img
+        {
+          max-width: 100%;
+          height: auto;
+        }
+
+        table {
+            margin-left: auto;
+            margin-right: auto;
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        body {
+            font-family: arial, sans-serif;
+            background-image: url('https://www.ceeri.res.in/wp-content/uploads/2018/03/Flexible-Electronics-Background.png');
+            background-attachment: fixed;
+        }
+
+        td, th {
+            border: 1px solid #a9a9a9;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+            padding: 8px;
+        }
+
+        *
+        tr:nth-child(odd) {
+            background-color: #FAFAD2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        .table {
+            transition: 0.3s;
+            border: 1px solid black;
+            margin: auto;
+        }
+
+        h1 {
+            text-shadow: 1px 1px 2px black, 0 0 25px yellow, 0 0 5px grey;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+        }
+
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: 1px solid black;
+            outline: none;
+            background-color: #DDDDDD;
+            color: #FAFAD2;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+        }
+
+            #myBtn:hover {
+                background-color: darkgray;
+            }
+
+            ul
+            {
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+              width: 25%;
+              background-color:rgba(0, 0, 0,0.5);
+              position: fixed;
+              height: 100%;
+              overflow: auto;
+            }
+
+            div li
+            {
+              style=font-size:130%;
+              margin-left:10%;
+              margin-right:10%;
+              padding:10px
+
+            }
+
+            li a
+            {
+              display: block;
+              color: #42d4f5;
+              padding: 8px 16px;
+              text-decoration: none;
+             }
+
+             li a.active
+             {
+               background-color: #4CAF50;
+               color: white;
+             }
+
+             li a:hover:not(.active)
+             {
+               background-color: #555;
+               color: white;
+             }
+
+    </style>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><b>^</b></button>
+    <script>
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+    <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="lampshade.html">Lampshade</a></li>
+    <li><a href="mix.html">Gears and Lampshade holder</a></li>
+    <li><a href="lampbox.html">Lampbox</a></li>
+    <li><a href="sensorbox.html">Sensor box</a></li>
+    <li><a href="construction.html">Construction Step</a></li>
+  </ul>
+
+  <marquee style="background-color:rgba(255, 99, 71, 0.5); margin-bottom: 40px; white-space:nowrap;">
+      <h3 style="text-align:center;font-size=20;color:#FAFAD2; ">Lamp Box Design<span style="padding-left:20%">Current Time: <span id="txt"></span></span></h3>
+  </marquee>
+
+<div style="margin-left:25%;padding:1px 16px;height:1000px;">
+    <div style="background-color: rgba(100, 100, 100, 0.8);width:90%;margin: auto;padding:10px;border-radius: 8px; border:1px solid #FAFAD2;">
+        <br>
+        <h1 style="text-align:center;font-size=200%;color:#FAFAD2;">Lamp Box</h1>
+        <h1 style="text-align:center;font-size=400%;color:#FAFAD2;background-color:rgba(255, 99, 71, 0.5);">Parameter Setting</h1>
+        <div  style="background-color: #FAFAD2;">
+          <li>Go modify > Change Parameter</li>
+          <li>Edit certain specification like height,length, weight and thickness to desire parameter</li>
+          <a href="Final_project/F360/lampbox_parameter.jpg"><img src="Final_project/F360/lampbox_parameter.jpg" style="width:50%;height:50%;padding-bottom:20px;padding-top:20px;display:block;margin-left:auto;margin-right:auto;"></img></a>
+        </div>
+
+          <h1 style="text-align:center;font-size=400%;color:#FAFAD2;background-color:rgba(255, 99, 71, 0.5);"><b>Front Plate</b></h1>
+          <div  style="background-color: #FAFAD2;">
+            <li>Create new component, name "Front plate"</li>
+            <li>Create sketch on the ZX plane</li>
+            <li>Create a rectangle with dimension of "length" and "height"(dimension use follow parameter)</li>
+            <li>Extrude the image with distance of "thickness"</li>
+            <li>Next, create tabs on both sides and bottom, create rectangle(whixh is the tabs),dimension using the parameter(length of tabs on width is wtabs or length of tabs on height is htabs) by thickness</li>
+            <li>Extrude cut the tabs with dimension: thickness</li>
+            <a href="Final_project/F360/lampbox_front.jpg"><img src="Final_project/F360/lampbox_front.jpg" style="max-height:350px;height:100%;width:50%;padding-bottom:20px;display:block;margin-left:auto;margin-right:auto;"></img></a>
+          </div>
+
+          <h1 style="text-align:center;font-size=400%;color:#FAFAD2;background-color:rgba(255, 99, 71, 0.5);"><b>Side Plate</b></h1>
+          <div  style="background-color: #FAFAD2;">
+            <li>Create a new component on the right face of the front plate</li>
+            <li>Create rectangle and colinear to constraint the side and dimension the width</li>
+            <li>Using same setting on desgin front, similar steps, add tabs but now only do on the width, or bottom face of the right plate will do</li>
+            <li>Extrude and rectangular pattern to form the tabs</li>
+            <a href="Final_project/F360/lampbox_side.jpg"><img src="Final_project/F360/lampbox_side.jpg" style="max-height:350px;height:100%;width:50%;padding-bottom:20px;display:block;margin-left:auto;margin-right:auto;"></img></a>
+         </div>
+
+          <h1 style="text-align:center;font-size=400%;color:#FAFAD2;background-color:rgba(255, 99, 71, 0.5);"><b>Mirror Plate</b></h1>
+          <div  style="background-color: #FAFAD2;">
+            <li>Create midplane on both component, mirror both components(front and side plate) (for mirror front, no need to mirror the holes created)</li>
+            <li>Combine cut all the plates at side in order to create joins.</li>
+            <a href="Final_project/F360/lampbox_mirror.jpg"><img src="Final_project/F360/lampbox_mirror.jpg" style="max-height:350px;height:100%;width:50%;padding-bottom:20px;display:block;margin-left:auto;margin-right:auto;"></img></a>
+          </div>
+
+          <h1 style="text-align:center;font-size=400%;color:#FAFAD2;background-color:rgba(255, 99, 71, 0.5);"><b>Bottom</b></h1>
+          <div  style="background-color: #FAFAD2;">
+            <li>Create component for making a cover on the bottom surface of either front or side component</li>
+            <li>Create a rectangle and extrude with a dimension of "thicknes"(parameter)</li>
+            <li>Combine the base using all other 4 plates as cutting tool to cut the cover.</li>
+            <a href="Final_project/F360/lampbox_bottom.jpg"><img src="Final_project/F360/lampbox_bottom.jpg" style="max-height:350px;height:100%;width:50%;padding-bottom:20px;display:block;margin-left:auto;margin-right:auto;"></img></a>
+
+          </div>
+
+          <h1 style="text-align:center;font-size=400%;color:#FAFAD2;background-color:rgba(255, 99, 71, 0.5);"><b>Cover (TOP)</b></h1>
+          <div  style="background-color: #FAFAD2;">
+            <li>Create component for making a cover on the top surface of either front or side component</li>
+            <li>Create a rectangle and extrude with a dimension of "thicknes"(parameter)</li>
+            <li>Combine the cover using all other 4 plates as cutting tool to cut the cover.</li>
+            <a href="Final_project/F360/lampbox_cover_combine.jpg"><img src="Final_project/F360/lampbox_cover_combine.jpg" style="max-height:350px;height:100%;width:50%;padding-bottom:20px;display:block;margin-left:auto;margin-right:auto;"></img></a>
+            <li>Create sketch on the top surface of the cover design holes in order to place the motor.</li>
+            <li><b>The image show distance is 40 because thats the distance from center of gear to another, so please check again on the gears center distance before hand.</b></li>
+            <a href="Final_project/F360/lampbox_cover_motor.jpg"><img src="Final_project/F360/lampbox_cover_motor.jpg" style="height:290px;width:50%;padding-bottom:20px;"></img></a><a href="Final_project/F360/lampbox_cover_motor_assembly.jpg"><img src="Final_project/F360/lampbox_cover_motor_assembly.jpg" style="width:50%;padding-bottom:20px;padding-top:20px"></img></a>
+            <li>Include in the design of <a href="sensorbox.html">Sensor Box</a> to modify the top in order to place the ultrasonic sensor, combine to cut the cover using the sensor box.</li>
+            <li>The arrow indicates to create some space for the wires to go through.</li>
+            <a href="Final_project/F360/lampbox_sensorbox.jpg"><img src="Final_project/F360/lampbox_sensorbox.jpg" style="height:290px;width:50%;padding-bottom:20px;"></img></a><a href="Final_project/F360/lampbox_sensorboxcombine.jpg"><img src="Final_project/F360/lampbox_sensorboxcombine.jpg" style="width:50%;padding-bottom:20px;padding-top:20px"></img></a>
+            <li>Next, create and extrude a ring at the hole created previously, with the ring outer diameter is the gear hole size diameter -0.7mm / -0.8mm so the gear able to use the ring as support to rotate.</li>
+            <a href="Final_project/F360/lampbox_coverfinal.jpg"><img src="Final_project/F360/lampbox_coverfinal.jpg" style="height:290px;width:50%;padding-bottom:20px;"></img></a><a href="Final_project/F360/lampbox_cover_gearplace.jpg"><img src="Final_project/F360/lampbox_cover_gearplace.jpg" style="width:50%;padding-bottom:20px;padding-top:20px"></img></a>
+
+            <p style="text-decoration: underline;text-align:center;font-size=120%;padding-bottom:10px"><b><a href="Final_project/F360/final box .f3z">Box Design:</a></b></p>
+            <iframe src="https://ichat854.autodesk360.com/shares/public/SH56a43QTfd62c1cd968188a364d9dcf6044?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0" style="padding-bottom:30px;display:block;margin-left:auto;margin-right:auto;"></iframe>
+          </div>
+
+</body>
+</html>
